@@ -14,7 +14,10 @@ The initial public site is a placeholder. It does not publish the working workbo
 
 ## Attribution
 
-Developed and maintained by {{< var institution-name >}}.
+<figure class="sarna-institutional-brand">
+<img src="{{< var institution-logo >}}" alt="National Institute of Chemistry logo" class="sarna-institutional-logo">
+<figcaption>The saRNA Database is developed and maintained at the {{< var institution-name >}}, within the {{< var department-name >}}.</figcaption>
+</figure>
 
 ## Governance and stewardship
 
