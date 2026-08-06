@@ -1,23 +1,22 @@
 ---
 title: "saRNA Database"
-description: "A public placeholder site for a future small activating RNA database."
+description: "Curated literature resource for saRNA research."
+format:
+  html:
+    toc: false
 ---
 
-<p class="sarna-lede">The {{< var project-name >}} is a literature-based resource for small activating RNA (saRNA) sequences, experimental conditions, and reported outcomes.</p>
+<p class="sarna-lede">A curated literature resource for small activating RNA (saRNA) sequences, experimental conditions, and reported outcomes.</p>
 
 ::: {.sarna-status}
 **{{< var database-status >}}**
 
-The database is being prepared alongside the associated publication. No preliminary or unvalidated data are currently public.
+The first validated database release will accompany the associated review article. No preliminary or unvalidated data are currently public.
 :::
 
-## What this resource will provide
+## Purpose
 
-The future release will bring together structured information from the saRNA literature. It is intended to make published sequence and experimental information easier to find, compare, cite, and reuse.
-
-No provisional record counts, release dates, manuscript details, author lists, or coverage claims are published during this placeholder phase.
-
-The associated review manuscript is still in preparation. Its draft scope informs the planned resource, but draft records, provisional totals, unresolved interpretations, and unvalidated conclusions are not public here.
+The resource will bring together structured information from the saRNA literature, making published sequence and experimental information easier to find, compare, cite, and reuse.
 
 ## Planned functionality
 

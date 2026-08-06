@@ -1,6 +1,9 @@
 ---
 title: "Downloads"
 description: "Placeholder for future saRNA Database release files."
+format:
+  html:
+    toc: false
 ---
 
 ## Release status
@@ -8,7 +11,7 @@ description: "Placeholder for future saRNA Database release files."
 ::: {.sarna-placeholder}
 **No release is available yet.**
 
-Download links will be added only after the manuscript-associated database has been finalized, validated, and approved for publication.
+Download links will be added only after the first database release has been finalized, validated, and approved for publication.
 
 The draft project plan anticipates a web-accessible table together with direct Excel and CSV downloads. Those functions are not active during the placeholder phase.
 :::

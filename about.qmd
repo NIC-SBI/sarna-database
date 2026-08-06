@@ -1,26 +1,29 @@
 ---
 title: "About"
 description: "Purpose, scope, governance, and licensing for the saRNA Database."
+format:
+  html:
+    toc: false
 ---
 
 ## Purpose and scope
 
-The saRNA Database is being developed as a structured literature resource for small activating RNA research. The associated draft review frames the resource around reported saRNA sequences and their experimental context, with annotations that may support future analysis of sequence, genomic, cellular, and activity-related features.
+The saRNA Database is being developed as a structured literature resource for small activating RNA research. The associated review article frames the resource around reported saRNA sequences and their experimental context, with annotations that may support future analysis of sequence, genomic, cellular, and activity-related features.
 
-The initial public site is a placeholder. It does not publish the working workbook, manuscript data, database records, or unpublished metadata.
+The initial public site is a placeholder. It does not publish the working workbook, database records, or unpublished project metadata.
 
 ## Attribution
 
-Department or institutional attribution will be added after the responsible organization confirms the wording.
+Developed and maintained by {{< var institution-name >}}.
 
 ## Governance and stewardship
 
-The database will be maintained through documented release procedures. The draft project scope includes manual curation from publications and patents, sequence-level annotations, experimental conditions, reported activity, and genomic context. The finalized Excel workbook will be the authoritative source for each release; validation, CSV export, versioning, correction handling, and manual Zenodo upload are described in the [future data-pipeline documentation](https://github.com/{{< var github-organization >}}/{{< var repository-name >}}/blob/main/docs/future-data-pipeline.md).
+The database will be maintained through documented release procedures. The project scope includes manual curation from publications and patents, sequence-level annotations, experimental conditions, reported activity, and genomic context. The finalized Excel workbook will be the authoritative source for each release; validation, CSV export, versioning, correction handling, and manual Zenodo upload are described in the [future data-pipeline documentation](https://github.com/{{< var github-organization >}}/{{< var repository-name >}}/blob/main/docs/future-data-pipeline.md).
 
 ## Licensing summary
 
-Released database content and original project annotations are intended to be licensed under CC BY 4.0. The website code is licensed under MIT. Source publications and other third-party materials retain their own rights. See [the data license](https://github.com/{{< var github-organization >}}/{{< var repository-name >}}/blob/main/LICENSE-DATA.md) and [the code license](https://github.com/{{< var github-organization >}}/{{< var repository-name >}}/blob/main/LICENSE) in the repository once its organization is confirmed.
+Released database content and original project annotations are intended to be licensed under CC BY 4.0. The website code is licensed under MIT. Source publications and other third-party materials retain their own rights. See the [data-license file](https://github.com/{{< var github-organization >}}/{{< var repository-name >}}/blob/main/LICENSE-DATA.md) and the [code-license file](https://github.com/{{< var github-organization >}}/{{< var repository-name >}}/blob/main/LICENSE) in the repository for the full terms.
 
 ## Repository
 
-The public repository will be available at [the project’s GitHub repository](https://github.com/{{< var github-organization >}}/{{< var repository-name >}}). The link will become active after the organization placeholder is replaced.
+Project documentation and source code are available in the [public GitHub repository](https://github.com/{{< var github-organization >}}/{{< var repository-name >}}).

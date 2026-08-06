@@ -3,11 +3,11 @@ title: "Methods"
 description: "Planned methods and stewardship documentation for the saRNA Database."
 ---
 
-The sections below reserve the structure for the methods documentation that will accompany the first validated release. They contain neutral placeholders until the manuscript-associated database is finalized.
+The sections below reserve the structure for the methods documentation that will accompany the first validated release. They contain neutral placeholders until the associated review article database is finalized.
 
 ## Literature-search strategy
 
-The draft review identifies peer-reviewed publications and patents as relevant source types. The finalized protocol will document the databases and patent sources searched, search strings, date ranges, deduplication, screening, and update procedures.
+The literature review identifies peer-reviewed publications and patents as relevant source types. The finalized protocol will document the databases and patent sources searched, search strings, date ranges, deduplication, screening, and update procedures.
 
 ## Inclusion and exclusion criteria
 

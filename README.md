@@ -34,6 +34,7 @@ Replace unresolved values only in [_variables.yml](_variables.yml):
 
 - the GitHub organization slug;
 - the project email address;
+- the institutional attribution;
 - release and citation values when they exist; and
 - optional custom-domain documentation.
 
