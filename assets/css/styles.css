@@ -1,0 +1,138 @@
+:root {
+  --sarna-ink: #17212b;
+  --sarna-muted: #52616b;
+  --sarna-blue: #145a78;
+  --sarna-blue-dark: #0d3f55;
+  --sarna-blue-light: #eaf4f7;
+  --sarna-gold: #b06b13;
+  --sarna-border: #d8e0e5;
+  --sarna-surface: #f6f8f9;
+}
+
+body {
+  color: var(--sarna-ink);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--sarna-border);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-weight: 600;
+}
+
+.navbar-brand {
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: var(--sarna-blue);
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  color: var(--sarna-blue-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #f0a84b;
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--sarna-blue-dark);
+  line-height: 1.2;
+}
+
+h1 {
+  letter-spacing: -0.02em;
+}
+
+.sarna-lede {
+  color: var(--sarna-muted);
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  max-width: 48rem;
+}
+
+.sarna-status {
+  background: var(--sarna-blue-light);
+  border-left: 0.35rem solid var(--sarna-blue);
+  border-radius: 0.2rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1.1rem 1.25rem;
+}
+
+.sarna-status strong {
+  color: var(--sarna-blue-dark);
+}
+
+.sarna-card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1.5rem 0 2rem;
+}
+
+.sarna-card {
+  background: var(--sarna-surface);
+  border: 1px solid var(--sarna-border);
+  border-radius: 0.35rem;
+  padding: 1.15rem;
+}
+
+.sarna-card h3 {
+  font-size: 1.05rem;
+  margin-top: 0;
+}
+
+.sarna-card p:last-child {
+  margin-bottom: 0;
+}
+
+.sarna-muted {
+  color: var(--sarna-muted);
+}
+
+.sarna-placeholder {
+  background: #fffaf3;
+  border: 1px dashed #d69a57;
+  border-radius: 0.35rem;
+  padding: 1rem 1.15rem;
+}
+
+.sarna-placeholder p:last-child {
+  margin-bottom: 0;
+}
+
+.sarna-footer-note {
+  border-top: 1px solid var(--sarna-border);
+  color: var(--sarna-muted);
+  font-size: 0.95rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+}
+
+@media (max-width: 800px) {
+  .sarna-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

@@ -1,0 +1,30 @@
+---
+title: "Downloads"
+description: "Placeholder for future saRNA Database release files."
+---
+
+## Release status
+
+::: {.sarna-placeholder}
+**No release is available yet.**
+
+Download links will be added only after the manuscript-associated database has been finalized, validated, and approved for publication.
+
+The draft project plan anticipates a web-accessible table together with direct Excel and CSV downloads. Those functions are not active during the placeholder phase.
+:::
+
+## Planned release files
+
+The release page will reserve locations for the following materials:
+
+- current release;
+- archived releases;
+- data dictionary;
+- changelog; and
+- Zenodo version record and DOI.
+
+Future releases will provide both the authoritative Excel workbook and a generated UTF-8 CSV export. No dummy or broken download buttons are displayed during the placeholder phase.
+
+## Licensing
+
+Released database content is intended to be available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The website code is available under the [MIT License](https://opensource.org/license/mit/). See the repository license files for the full terms and scope.

@@ -1,0 +1,38 @@
+# Quarto build output and project metadata
+_site/
+.quarto/
+
+# Private and working data
+data/private/*
+!data/private/.gitkeep
+
+output/
+outputs/
+
+# Local working directories
+work_missing_values/
+work_publication_ids/
+work_record_ids/
+node_modules/
+
+# Working Excel tables are not uploadable during the placeholder phase.
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+
+# Temporary spreadsheet lock files
+~$*.xlsx
+~$*.xls
+~$*.xlsm
+~$*.csv
+*.tmp
+*.temp
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+
+/.quarto/
+**/*.quarto_ipynb

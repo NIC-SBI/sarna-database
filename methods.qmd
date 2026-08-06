@@ -1,0 +1,46 @@
+---
+title: "Methods"
+description: "Planned methods and stewardship documentation for the saRNA Database."
+---
+
+The sections below reserve the structure for the methods documentation that will accompany the first validated release. They contain neutral placeholders until the manuscript-associated database is finalized.
+
+## Literature-search strategy
+
+The draft review identifies peer-reviewed publications and patents as relevant source types. The finalized protocol will document the databases and patent sources searched, search strings, date ranges, deduplication, screening, and update procedures.
+
+## Inclusion and exclusion criteria
+
+The final criteria will specify which saRNA, antigene RNA, promoter-targeting, and transcript-targeting reports qualify for inclusion. Related RNA-activation mechanisms will be retained or excluded according to the approved schema. No provisional eligibility decisions are published here.
+
+## Sequence extraction
+
+The draft project scope includes guide and passenger strands, duplex length, terminal overhangs, reported chemical modifications, and the target sequence or target region when reported. Source notation will be preserved alongside any normalized fields.
+
+## Experimental-condition extraction
+
+Planned fields include species, cell line or tissue model, concentration, delivery or transfection vehicle, treatment timing, assay timing, and relevant formulation details. The final schema will define terminology and units before release.
+
+## Outcome extraction
+
+The database is intended to preserve author-reported activity assessments and their readout context. Measured outcomes will be distinguished from interpretations, and the source publication or patent will remain attached to each reported result.
+
+## Identifier policy
+
+Records are expected to represent reported testing contexts, while sequence-level identifiers will be assigned separately only after the final schema is approved. Policies for stable record, sequence, source-publication, and correction identifiers will be documented before release.
+
+## Sequence normalization
+
+The draft workflow considers RNA/DNA representation, strand orientation, terminal overhang handling, and sequence-level fields. Final rules will state how source notation, modified bases, ambiguous bases, and missing sequence information are preserved.
+
+## Quality control
+
+Draft annotations include target identity, gene-model and reference-assembly context, transcription-start-site information, and exact sequence matching where possible. The final release process will document independent review, discrepancy handling, validation summaries, and release gates.
+
+## Versioning
+
+Each release will link the authoritative Excel workbook to its generated CSV export, data dictionary, changelog, validation report, and Zenodo package. Versioning will make changes to annotations, corrections, and release contents traceable.
+
+## Corrections
+
+Users will be able to report suspected errors, missing publications, sequence discrepancies, and metadata corrections through the project contact channel. Accepted corrections will be documented and incorporated into a later version rather than silently overwriting a released record.

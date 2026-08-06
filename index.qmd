@@ -1,0 +1,43 @@
+---
+title: "saRNA Database"
+description: "A public placeholder site for a future small activating RNA database."
+---
+
+<p class="sarna-lede">The {{< var project-name >}} is a literature-based resource for small activating RNA (saRNA) sequences, experimental conditions, and reported outcomes.</p>
+
+::: {.sarna-status}
+**{{< var database-status >}}**
+
+The database is being prepared alongside the associated publication. No preliminary or unvalidated data are currently public.
+:::
+
+## What this resource will provide
+
+The future release will bring together structured information from the saRNA literature. It is intended to make published sequence and experimental information easier to find, compare, cite, and reuse.
+
+No provisional record counts, release dates, manuscript details, author lists, or coverage claims are published during this placeholder phase.
+
+The associated review manuscript is still in preparation. Its draft scope informs the planned resource, but draft records, provisional totals, unresolved interpretations, and unvalidated conclusions are not public here.
+
+## Planned functionality
+
+<div class="sarna-card-grid">
+<section class="sarna-card">
+<h3>Search</h3>
+<p>Search the complete released table from one global search field.</p>
+</section>
+<section class="sarna-card">
+<h3>Explore</h3>
+<p>Sort records, filter the results, and navigate a wide table accessibly.</p>
+</section>
+<section class="sarna-card">
+<h3>Download</h3>
+<p>Download the authoritative Excel workbook and a UTF-8 CSV export for each release.</p>
+</section>
+</div>
+
+## Learn more
+
+Read about the planned [methods](methods.qmd), the future [database interface](database.qmd), [downloads](downloads.qmd), [citation](citation.qmd), and [contact options](contact.qmd).
+
+<p class="sarna-footer-note">This site does not use analytics, cookies, advertising, or visitor tracking.</p>

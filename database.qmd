@@ -1,0 +1,42 @@
+---
+title: "Database"
+description: "Placeholder for the future saRNA Database search interface."
+---
+
+## Release status
+
+::: {.sarna-placeholder}
+**No database release is available yet.**
+
+The searchable table will accompany the associated publication after the manuscript-associated database has been finalized and validated. This page intentionally contains no sample rows from the working materials.
+:::
+
+## Planned search and table
+
+The first public interface is planned as a static, client-side table for a literature-scale collection and will include:
+
+- one global search box;
+- sortable columns;
+- pagination or virtual scrolling;
+- horizontal scrolling for wide tables;
+- a clear record-count display;
+- a reset-search control; and
+- optional column visibility controls if the finalized table is difficult to navigate.
+
+The table will be progressively enhanced so that the site remains understandable without JavaScript. No synthetic scientific records will be used in the placeholder site.
+
+## Planned record content
+
+The draft project scope suggests that a future release may organize the following types of information:
+
+- saRNA duplex information, including guide and passenger strands, sequence length, terminal overhangs, and reported chemical modifications;
+- target context, including target gene, species, promoter or transcript-targeting context, and validated genomic annotations where available;
+- experimental context, including cell type or model, concentration, delivery or transfection vehicle, treatment timing, assay timing, and formulation details;
+- reported outcomes, preserving the activity assessment and readout context reported by the source; and
+- provenance, including the source publication or patent, source notes, and later corrections.
+
+These are draft-informed categories, not a finalized schema or released records. Final field names, inclusion rules, and identifier policies will be approved before publication.
+
+## Future release information
+
+Each release will identify its version, source workbook, CSV export, data dictionary, changelog, and Zenodo version record. The finalized Excel workbook will be the authoritative source for each release.

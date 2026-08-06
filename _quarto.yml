@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+
+website:
+  title: "saRNA Database"
+  description: "A public resource for small activating RNA literature data."
+  navbar:
+    title: "saRNA Database"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Database"
+        href: database.qmd
+      - text: "Methods"
+        href: methods.qmd
+      - text: "Downloads"
+        href: downloads.qmd
+      - text: "Citation"
+        href: citation.qmd
+      - text: "Contact"
+        href: contact.qmd
+      - text: "About"
+        href: about.qmd
+
+format:
+  html:
+    theme: default
+    css: assets/css/styles.css
+    toc: true
+    toc-title: "On this page"
+    page-navigation: true
+    anchor-sections: true
+    include-in-header: _includes/noindex.html
+
+filters:
+  - scripts/project-links.lua
+
