@@ -1,9 +1,12 @@
 ---
 title: "Citation"
 description: "Placeholder citation information for the saRNA Database."
+format:
+  html:
+    toc: false
 ---
 
-The associated review manuscript is still in preparation, and its title, author list, citation, and DOI are not yet final. Citation details will be published with the first validated release. The review paper and the database dataset will have separate persistent identifiers.
+The first validated database release will accompany the associated review article. Article and dataset citation details will be added with the release, and they will have separate persistent identifiers.
 
 ## Review-paper citation
 

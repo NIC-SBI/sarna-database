@@ -73,6 +73,16 @@ if ($htmlFiles.Count -eq 0) {
 }
 
 $allHtml = ($htmlFiles | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw }) -join [Environment]::NewLine
+$unresolvedPlaceholderPattern = 'PROJECT_EMAIL_PLACEHOLDER|GITHUB_ORG_PLACEHOLDER|COPYRIGHT_HOLDER_PLACEHOLDER'
+if ($allHtml -match $unresolvedPlaceholderPattern) {
+    throw "An unresolved public placeholder was found in rendered HTML."
+}
+if ($allHtml -match 'href\s*=\s*["'']mailto:\s*["'']') {
+    throw "An empty mailto link was found in rendered HTML."
+}
+if ($allHtml -match 'href\s*=\s*["'']mailto:[^"''>]*(?:PROJECT_EMAIL_PLACEHOLDER|GITHUB_ORG_PLACEHOLDER|COPYRIGHT_HOLDER_PLACEHOLDER|\{\{|\}\})') {
+    throw "A malformed placeholder mailto link was found in rendered HTML."
+}
 $trackingPattern = 'googletagmanager|google-analytics|gtag\s*\(|plausible|matomo|hotjar|mixpanel|segment\.io|facebook\.com/tr|pixel\.facebook'
 if ($allHtml -match $trackingPattern) {
     throw "Tracking or analytics code was found in the rendered site."
@@ -82,6 +92,25 @@ if ($allHtml -match '<(?:script|link)[^>]+(?:src|href)=["'']https?://') {
 }
 if ($allHtml -notmatch '<meta[^>]+name=["'']robots["''][^>]+noindex') {
     throw "The placeholder site must contain a noindex directive."
+}
+if ($allHtml -notmatch '<meta[^>]+name=["'']robots["''][^>]+nofollow') {
+    throw "The placeholder site must contain a nofollow directive."
+}
+
+$pagesWithoutToc = @("index.html", "downloads.html", "citation.html", "contact.html", "about.html")
+foreach ($page in $pagesWithoutToc) {
+    $pageHtml = Get-Content -LiteralPath (Join-Path $sitePath $page) -Raw
+    if ($pageHtml -match 'id=["'']toc-title["'']') {
+        throw "The short page must not contain a table of contents: $page"
+    }
+}
+
+$pagesWithToc = @("methods.html", "database.html")
+foreach ($page in $pagesWithToc) {
+    $pageHtml = Get-Content -LiteralPath (Join-Path $sitePath $page) -Raw
+    if ($pageHtml -notmatch 'id=["'']toc-title["'']') {
+        throw "The structured page must contain a table of contents: $page"
+    }
 }
 
 $brokenLinks = [System.Collections.Generic.List[string]]::new()

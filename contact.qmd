@@ -1,6 +1,9 @@
 ---
 title: "Contact"
 description: "How to report corrections and questions about the saRNA Database."
+format:
+  html:
+    toc: false
 ---
 
 ## Corrections and questions
@@ -13,9 +16,4 @@ The project will use a project email address as the correction and contact chann
 - metadata corrections; and
 - reuse and licensing questions.
 
-When the address is configured, contact the project through the [project email address](mailto:{{< var project-email >}}). The placeholder site does not include a submission form.
-
-## Before the first release
-
-The project email address will be published before the first database release. Until then, please use the repository issue and discussion mechanisms after the public repository link is confirmed.
-
+[{{< var project-email >}}](mailto:{{< var project-email >}})

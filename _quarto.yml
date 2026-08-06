@@ -6,7 +6,7 @@ project:
 
 website:
   title: "saRNA Database"
-  description: "A public resource for small activating RNA literature data."
+  description: "A curated literature resource for small activating RNA sequences, experimental conditions, and reported outcomes."
   navbar:
     title: "saRNA Database"
     left:
@@ -24,6 +24,9 @@ website:
         href: contact.qmd
       - text: "About"
         href: about.qmd
+    right:
+      - text: "GitHub repository"
+        href: "https://github.com/{{< var github-organization >}}/{{< var repository-name >}}"
 
 format:
   html:
@@ -37,4 +40,3 @@ format:
 
 filters:
   - scripts/project-links.lua
-

@@ -1,6 +1,7 @@
 project-name: "saRNA Database"
 github-organization: "NIC-SBI"
 repository-name: "sarna-database"
+institution-name: "NIC-SBI"
 project-email: "PROJECT_EMAIL_PLACEHOLDER"
 database-status: "Under preparation"
 database-version: "Not yet released"
