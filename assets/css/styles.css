@@ -63,6 +63,36 @@ h1 {
   max-width: 48rem;
 }
 
+.sarna-institutional-note {
+  color: var(--sarna-muted);
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+}
+
+.sarna-institutional-brand {
+  align-items: center;
+  background: var(--sarna-surface);
+  border: 1px solid var(--sarna-border);
+  border-radius: 0.35rem;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem;
+}
+
+.sarna-institutional-logo {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 22rem;
+}
+
+.sarna-institutional-brand figcaption {
+  color: var(--sarna-ink);
+  margin: 0;
+}
+
 .sarna-status {
   background: var(--sarna-blue-light);
   border-left: 0.35rem solid var(--sarna-blue);
@@ -121,9 +151,35 @@ h1 {
   padding-top: 1.25rem;
 }
 
+.sarna-site-footer {
+  border-top: 1px solid var(--sarna-border);
+  color: var(--sarna-muted);
+  font-size: 0.9rem;
+  margin: 3rem auto 0;
+  max-width: 52rem;
+  padding: 1.25rem 1rem 0;
+  text-align: center;
+}
+
+.sarna-site-footer p {
+  margin: 0;
+}
+
+.sarna-site-footer span {
+  display: block;
+}
+
 @media (max-width: 800px) {
   .sarna-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .sarna-institutional-brand {
+    grid-template-columns: 1fr;
+  }
+
+  .sarna-institutional-logo {
+    width: min(100%, 22rem);
   }
 }
 
@@ -135,4 +191,3 @@ h1 {
     transition-duration: 0.01ms !important;
   }
 }
-

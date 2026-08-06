@@ -8,6 +8,8 @@ format:
 
 <p class="sarna-lede">A curated literature resource for small activating RNA (saRNA) sequences, experimental conditions, and reported outcomes.</p>
 
+<p class="sarna-institutional-note">Developed at {{< var institution-name >}} · {{< var department-name >}}</p>
+
 ::: {.sarna-status}
 **{{< var database-status >}}**
 

@@ -37,6 +37,7 @@ format:
     page-navigation: true
     anchor-sections: true
     include-in-header: _includes/noindex.html
+    include-after-body: _includes/site-footer.html
 
 filters:
   - scripts/project-links.lua
