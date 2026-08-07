@@ -1,72 +1,178 @@
 # saRNA Database
 
-This repository contains the Quarto source for the public placeholder website for the saRNA Database, a future literature-based resource for small activating RNA research.
+The **saRNA Database** is a curated literature resource for **small activating RNA (saRNA)** research. It brings together reported saRNA sequences with their experimental context, target information, genomic annotations, and reported effects in a structured and searchable format.
 
-## Current status
+The resource is developed and maintained at the **National Institute of Chemistry, Slovenia**.
 
-The site is **under preparation**. It does not publish the current working workbook, manuscript data, database records, unpublished metadata, or a functional data-processing pipeline. No preliminary or unvalidated data are public.
+**Website:** https://nic-sbi.github.io/sarna-database/
 
-## Local requirements
+## Project status
 
-Install the current supported [Quarto release](https://quarto.org/docs/get-started/). Git is recommended for workflow checks.
+The database is currently **under preparation**.
 
-Preview locally:
+The first validated public release is planned to accompany the associated peer-reviewed review article. The working database and preliminary or unvalidated records are not published in this repository.
 
-```text
-quarto preview
-```
+Once released, each database version will be made available through:
 
-Render the complete site into the uncommitted _site/ directory:
+- the searchable saRNA Database website;
+- versioned downloadable data files; and
+- a persistent archival record on Zenodo.
 
-```text
-quarto render
-```
+The associated article and dataset will have separate persistent identifiers.
 
-Run the placeholder-phase checks after rendering:
+## Scope
 
-```text
-pwsh ./scripts/validate-site.ps1 -SiteDir _site
-```
+The database is designed to capture experimentally reported small activating RNAs and the context in which their activity was evaluated.
 
-## Configuration
+Curated information includes, where available:
 
-Replace unresolved values only in [_variables.yml](_variables.yml):
+- sense and antisense saRNA sequences;
+- sequence length and GC content;
+- sequence modifications and terminal overhangs;
+- target genes and genomic target regions;
+- organism and reference-genome information;
+- transcription start site and relative targeting position;
+- experimental model and cell line;
+- saRNA concentration or dose;
+- delivery or transfection method;
+- treatment duration;
+- assay or experimental readout;
+- reported activity or effect;
+- publication or patent provenance; and
+- identifiers such as DOI, PMID, Ensembl Gene ID, and patent numbers.
 
-- the GitHub organization slug;
-- the project email address;
-- the institution name, department name, and logo path;
-- release and citation values when they exist; and
-- optional custom-domain documentation.
+Information is retained as reported by the original source where appropriate, with normalized fields added to support consistent searching and analysis.
 
-The copyright holder remains a configurable placeholder in LICENSE until the department confirms the correct attribution.
+## Data organization
 
-The initial project URL will be https://<organization>.github.io/sarna-database/. No custom domain or CNAME file is assumed.
+The public dataset is organized around three linked entities:
 
-## Repository structure
+### Records
 
-```text
-.github/workflows/   GitHub Actions checks and Pages deployment
-assets/              Local CSS and image placeholders
-data/                Public data-directory documentation and private-data guard
-docs/                Deployment, maintenance, and future-pipeline documentation
-scripts/              Quarto placeholder-link filter and validation script
-*.qmd                Quarto website pages
-_quarto.yml          Quarto website configuration
-_variables.yml       Central project placeholders
-```
+A **record** represents a reported experimental observation or testing context for an saRNA.
 
-## Deployment
+Records contain the experimental conditions, biological context, target information, reported effect, and links to the corresponding sequence and source.
 
-The check-site.yml workflow renders the site on pushes and pull requests. The publish-site.yml workflow renders and deploys to GitHub Pages on pushes to main or through manual execution. Configure the repository’s Pages source as **GitHub Actions**. See [docs/deployment.md](docs/deployment.md).
+Each record has a stable identifier of the form:
 
-## Data protection
+`RECxxxxxx`
 
-Never add manuscripts, working spreadsheets, reviewer files, internal notes, unpublished metadata, or private data to this public repository. The data/private/ and output/ directories are ignored, and all Excel workbook formats are blocked during the placeholder phase. The placeholder-phase validation also rejects workbook and CSV files until an explicit release change updates that safeguard. Before a finalized public workbook is released, narrow or intentionally override the Excel ignore rule as part of the approved release change.
+### Sequences
 
-## Future release
+A **sequence** represents a distinct normalized saRNA sequence pair.
 
-The future release will use one finalized Excel workbook as the authoritative source, validate it, generate a UTF-8 CSV export, expose a static client-side searchable table, and create a versioned package for deliberate manual upload to Zenodo. This architecture is documented in [docs/future-data-pipeline.md](docs/future-data-pipeline.md) and is not implemented yet.
+Sequence entries contain the normalized sense and antisense strands and sequence-derived properties such as length and GC content.
 
-## License
+Each sequence has a stable identifier of the form:
 
-Website code is licensed under MIT. Future released database content and original project annotations are designated for CC BY 4.0, subject to the terms and scope described in [LICENSE-DATA.md](LICENSE-DATA.md). Cited publications and third-party materials retain their own rights.
+`SEQxxxxxx`
+
+Multiple experimental records may refer to the same sequence.
+
+### Sources
+
+A **source** represents a publication or patent from which database records were curated.
+
+Source metadata include bibliographic identifiers and links to the records and sequences associated with that source.
+
+Each source has a stable project identifier.
+
+The relationships between these tables allow sequence information and bibliographic metadata to be stored once while remaining linked to all relevant experimental records.
+
+## Data access
+
+When the first validated release is published, the dataset will be available in open, machine-readable formats suitable for reuse and archival.
+
+Release materials are expected to include:
+
+- experimental records;
+- sequence data;
+- source/publication metadata;
+- a data dictionary;
+- release metadata;
+- validation information; and
+- a human-readable spreadsheet representation.
+
+The same released data will be used to generate the searchable tables presented on the project website.
+
+See the [Downloads](https://nic-sbi.github.io/sarna-database/downloads.html) page for release files when they become available.
+
+## Curation and quality control
+
+The database is manually curated from the scientific and patent literature.
+
+The release methodology will document:
+
+- literature-search and screening procedures;
+- inclusion and exclusion criteria;
+- sequence extraction and normalization;
+- experimental-condition extraction;
+- outcome annotation;
+- identifier assignment;
+- genomic annotation;
+- quality-control procedures;
+- discrepancy resolution; and
+- release and correction procedures.
+
+Reported values are preserved where possible. Normalized or derived values are distinguished from source-reported information.
+
+For additional information, see the [Methods](https://nic-sbi.github.io/sarna-database/methods.html) page.
+
+## Versioning and archival
+
+Public database releases will be versioned.
+
+Each validated release will be archived on **Zenodo** and assigned a persistent DOI. Subsequent corrections or additions will be issued as new versions rather than silently replacing a previously released dataset.
+
+The website represents the current public version of the resource, while Zenodo provides the persistent archival record for individual releases.
+
+## Citation
+
+Citation information will be added when the associated article and first database release are published.
+
+Users should cite:
+
+1. the associated peer-reviewed article; and
+2. the specific version of the saRNA Database used in their work.
+
+See the [Citation](https://nic-sbi.github.io/sarna-database/citation.html) page for current citation information.
+
+## Reporting errors and suggesting additions
+
+We welcome reports of:
+
+- possible sequence errors;
+- missing or incorrectly annotated publications;
+- discrepancies in experimental metadata;
+- identifier or genomic-annotation issues; and
+- relevant publications or patents that may meet the database inclusion criteria.
+
+Please use the contact information provided on the [project website](https://nic-sbi.github.io/sarna-database/contact.html). Accepted corrections will be documented and incorporated into a subsequent database release.
+
+## Licensing
+
+Database content and original project annotations are intended to be released under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.
+
+Website and supporting source code are licensed separately under the **MIT License**.
+
+Source publications, patents, and other third-party materials remain subject to their respective copyright and licensing terms.
+
+See [`LICENSE-DATA.md`](LICENSE-DATA.md) and [`LICENSE`](LICENSE) for details.
+
+## Repository
+
+This repository contains the source code, documentation, and release infrastructure for the saRNA Database website and public dataset.
+
+The website is built with [Quarto](https://quarto.org/) and deployed through GitHub Pages.
+
+Development, deployment, validation, and release procedures are documented under [`docs/`](docs/).
+
+Working spreadsheets, unpublished manuscript materials, internal curation notes, and other non-public project materials are not stored in this public repository.
+
+## Maintainers
+
+The saRNA Database is developed and maintained at the **National Institute of Chemistry, Slovenia**.
+
+Project contact information is available at:
+
+https://nic-sbi.github.io/sarna-database/contact.html
