@@ -23,18 +23,6 @@ The future interface will provide a searchable, sortable, and filterable view of
 
 No synthetic scientific records will be used in the placeholder site.
 
-## Planned record content
-
-The future release is expected to organize the following types of information:
-
-- saRNA sequences and duplex details;
-- target, gene, species, and genomic context;
-- experimental conditions and delivery details;
-- reported outcomes and their readout context; and
-- source provenance and later corrections.
-
-These are planned categories, not a finalized schema or released records. Final field names, inclusion rules, and identifier policies will be approved before publication.
-
 ## Future release information
 
-Future releases will provide downloads of the authoritative Excel workbook and its CSV export. Each release will identify its version, data dictionary, changelog, and Zenodo version record. The finalized Excel workbook will be the authoritative source for each release.
+Future releases will provide downloads of the authoritative Excel workbook and its CSV export. Each release will identify its version, data dictionary, changelog, and Zenodo version record.
