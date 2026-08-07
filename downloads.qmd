@@ -13,7 +13,6 @@ format:
 
 Download links will be added only after the first database release has been finalized, validated, and approved for publication.
 
-The draft project plan anticipates a web-accessible table together with direct Excel and CSV downloads. Those functions are not active during the placeholder phase.
 :::
 
 ## Planned release files
@@ -26,7 +25,7 @@ The release page will reserve locations for the following materials:
 - changelog; and
 - Zenodo version record and DOI.
 
-Future releases will provide both the authoritative Excel workbook and a generated UTF-8 CSV export. No dummy or broken download buttons are displayed during the placeholder phase.
+Future releases will provide both the authoritative Excel workbook and a generated UTF-8 CSV export.
 
 ## Licensing
 
