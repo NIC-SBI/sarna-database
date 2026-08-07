@@ -10,7 +10,7 @@ The first validated database release will accompany the associated review articl
 
 ## Review-paper citation
 
-The review-paper citation will be added after publication. Its DOI is maintained centrally in _variables.yml and will not be linked until it is available.
+The review-paper citation will be added after publication.
 
 ## Database citation
 
