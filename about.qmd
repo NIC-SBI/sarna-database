@@ -21,7 +21,7 @@ The initial public site is a placeholder. It does not publish the working workbo
 
 ## Governance and stewardship
 
-The database will be maintained through documented release procedures. The project scope includes manual curation from publications and patents, sequence-level annotations, experimental conditions, reported activity, and genomic context. The finalized Excel workbook will be the authoritative source for each release; validation, CSV export, versioning, correction handling, and manual Zenodo upload are described in the [future data-pipeline documentation](https://github.com/{{< var github-organization >}}/{{< var repository-name >}}/blob/main/docs/future-data-pipeline.md).
+The database will be maintained through documented release procedures. The project scope includes manual curation from publications and patents, sequence-level annotations, experimental conditions, reported activity, and genomic context.
 
 ## Licensing summary
 
