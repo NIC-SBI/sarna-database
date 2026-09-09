@@ -37,8 +37,8 @@ foreach ($page in ($requiredSourcePages | ForEach-Object { [IO.Path]::ChangeExte
 
 $sourceFiles = @(Get-ChildItem -LiteralPath $root -Recurse -File | Where-Object {
     $relativePath = $_.FullName.Substring($root.Length).TrimStart([IO.Path]::DirectorySeparatorChar, [IO.Path]::AltDirectorySeparatorChar)
-    $relativePath -notlike "$SiteDir\*" -and
-    $relativePath -notlike ".git\*" -and
+    $relativePath -notmatch "^$([regex]::Escape($SiteDir))([\\/]|$)" -and
+    $relativePath -notmatch "^\.git([\\/]|$)" -and
     $relativePath -notmatch "^(data[\\/]private|output|outputs|work_missing_values|work_publication_ids|work_record_ids|node_modules)([\\/]|$)"
 })
 
