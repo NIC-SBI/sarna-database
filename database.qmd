@@ -1,28 +1,40 @@
 ---
 title: "Database"
-description: "Placeholder for the future saRNA Database search interface."
+description: "Search the public saRNA Database release."
+page-layout: full
+toc: false
 ---
 
-## Release status
+The public database contains 4,706 literature-derived records representing reported observations and experimental contexts. Search across record identifiers, sequences, targets, models, conditions, and source publications.
 
-::: {.sarna-placeholder}
-**No database release is available yet.**
+::: {.sarna-archive-callout}
+**saRNA Database v1.0.0**
 
-The first validated database release will accompany the associated review article after the database has been finalized and validated. This page intentionally contains no records from working materials.
+For the complete release package, permanent archive, and reuse citation, visit [Zenodo record 10.5281/zenodo.21871232](https://doi.org/10.5281/zenodo.21871232).
 :::
 
-## Planned search and table
+## Search the database
 
-The future interface will provide a searchable, sortable, and filterable view of a wide table. It is planned as a static client-side table with:
+The Records view shows a compact set of commonly used fields. Select **Expand** beside any row to see the complete record and its source details. The Sequences and Sources views provide the other two released data tables.
 
-- one global search box;
-- sortable columns;
-- filtering and clear result navigation;
-- pagination for longer result sets; and
-- horizontal scrolling for wide tables;
+<div
+  id="sarna-database-app"
+  class="sarna-database-app"
+  data-records-url="data/public/records.csv"
+  data-sequences-url="data/public/sequences.csv"
+  data-sources-url="data/public/sources.csv"
+>
+  <p class="sarna-loading" role="status">Loading the database…</p>
+</div>
 
-No synthetic scientific records will be used in the placeholder site.
+<noscript>
+JavaScript is required for the searchable table. The complete database remains available from the [Zenodo archive](https://doi.org/10.5281/zenodo.21871232).
+</noscript>
 
-## Future release information
+<script src="assets/js/database.js" defer></script>
 
-Future releases will provide downloads of the authoritative Excel workbook and its CSV export. Each release will identify its version, data dictionary, changelog, and Zenodo version record.
+## Interpreting the records
+
+Each row in the Records view is one reported observation or experimental record. A sequence may appear in multiple records when it was tested under different conditions, models, or publications.
+
+Reported effects and experimental conditions are intentionally heterogeneous. Numeric values, categories, ranges, and source-specific measurements should not be treated as directly comparable without checking the underlying assay and source. Records associated with a retracted publication are retained for provenance and marked in the interface.

@@ -7,8 +7,7 @@ Before opening a pull request:
 - preview the site locally;
 - confirm that internal links are relative;
 - confirm that the site contains no analytics or tracking;
-- confirm that no workbook, manuscript, reviewer file, internal note, unpublished metadata, or real database values were added; and
+- confirm that no workbook, manuscript, reviewer file, internal note, unpublished metadata, or unapproved database values were added; and
 - confirm that the site-check workflow passes.
 
-Do not commit the current working workbook or any other private project material. The future public workbook will be added only through an explicit, validated data-release change.
-
+Do not commit working workbooks or other private project material. Public release packages are distributed through Zenodo; only approved web-table data belong in this repository.

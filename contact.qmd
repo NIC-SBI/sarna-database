@@ -8,12 +8,14 @@ format:
 
 ## Corrections and questions
 
-The project will use a project email address as the correction and contact channel. Users may report:
+Please use the project contact address to report:
 
 - suspected errors;
 - missing publications;
 - sequence discrepancies;
 - metadata corrections; and
-- reuse and licensing questions.
+- reuse or licensing questions.
 
 [{{< var project-email >}}](mailto:{{< var project-email >}})
+
+Please include the relevant record, sequence, or publication identifier when possible. Accepted corrections will be included in a later versioned release.

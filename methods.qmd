@@ -1,30 +1,40 @@
 ---
 title: "Methods"
-description: "Planned methods and stewardship documentation for the saRNA Database."
+description: "Scope, data structure, normalization, and interpretation guidance for the saRNA Database."
 ---
 
-The sections below reserve the structure for the methods documentation that will accompany the first validated release.
+## Scope
 
-## Literature-search strategy
+The saRNA Database is a searchable repository of reported or tested sequences and the experimental conditions and effects associated with individual observations. It does not classify every sequence as a candidate saRNA, control, mechanistic reagent, or other functional role.
 
-The literature review identifies peer-reviewed publications and patents as relevant source types.
+## Record structure
 
-## Inclusion and exclusion criteria
+One database record represents one reported observation or experimental context. The same nucleotide sequence may appear in multiple records when it was tested under different conditions, in different models, or in different publications.
 
-The final criteria will specify which saRNA, antigene RNA, promoter-targeting, and transcript-targeting reports qualify for inclusion. 
+Bibliographic metadata are stored once in the Sources table. Each record links to one source using a stable publication identifier. The Sequences table groups records that share the same normalized sense and antisense sequence strings.
 
-## Sequence extraction
+## Sequence normalization
 
-The draft project scope includes guide and passenger strands, duplex length, terminal overhangs, reported chemical modifications, and the target sequence or target region when reported. 
+Normalized sequences are trimmed and converted to uppercase. RNA `U` and DNA `T` are preserved as reported and are not interconverted. A strand for which no sequence was reported is represented as `no_sequence_reported`.
 
-## Experimental-condition extraction
+Sequence identity is based only on the normalized sense and antisense nucleotide strings. Chemical modifications, conjugates, delivery systems, dose, model, publication, and experimental outcome do not create separate sequence identities.
 
-Planned fields include species, cell line or tissue model, concentration, delivery or transfection vehicle, treatment timing, assay timing, and relevant formulation details.
+Sequence length and GC percentage are derived from normalized sequences. Missing sequences have blank derived length and GC values rather than zero.
 
-## Outcome extraction
+## Missing and special values
 
-The database is intended to preserve author-reported activity assessments and their readout context.
+- `not_reported` means that the information was unavailable or not stated. It does not mean zero or an experimentally absent result.
+- `not_applicable` means that the field does not logically apply to the record.
+- `no_alignment_to_reference_genome` means that a sequence was reported but no usable alignment to the stated reference genome is recorded.
+- `not_measured` means that the relevant outcome was explicitly not measured.
+- `no_sequence_reported` means that no nucleotide sequence was available for that strand.
 
-## Corrections
+## Interpretation
 
-Users will be able to report suspected errors, missing publications, sequence discrepancies, and metadata corrections through the project contact channel. Accepted corrections will be documented and incorporated into a later version rather than silently overwriting a released record.
+Activity and experimental-condition fields retain heterogeneous source-reported measurements. Reported effects may be numeric values, ranges, categories, thresholds, arbitrary units, or other source-specific representations. They have not been converted to a common scoring scale and should not be compared directly without confirming compatible assays and definitions.
+
+Source-reported values are preserved wherever practical. When a value appeared unusual but was explicitly stated by the source, it was generally retained with explanatory context rather than silently corrected.
+
+## Identifiers and corrections
+
+Records, sequence identities, and sources use stable identifiers. Retired sequence identifiers are not reused. Corrections and additions will be documented in later versioned releases rather than silently replacing the archived release.

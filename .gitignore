@@ -15,7 +15,7 @@ work_publication_ids/
 work_record_ids/
 node_modules/
 
-# Working Excel tables are not uploadable during the placeholder phase.
+# Excel files are distributed through Zenodo rather than this website repository.
 *.xlsx
 *.xls
 *.xlsm

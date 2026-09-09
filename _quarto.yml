@@ -3,6 +3,9 @@ project:
   output-dir: _site
   render:
     - "*.qmd"
+  resources:
+    - "data/public/*.csv"
+    - "assets/js/database.js"
 
 website:
   title: "saRNA Database"
@@ -16,7 +19,7 @@ website:
         href: database.qmd
       - text: "Methods"
         href: methods.qmd
-      - text: "Downloads"
+      - text: "Archive"
         href: downloads.qmd
       - text: "Citation"
         href: citation.qmd
@@ -36,7 +39,7 @@ format:
     toc-title: "On this page"
     page-navigation: true
     anchor-sections: true
-    include-in-header: _includes/noindex.html
+    include-in-header: _includes/robots.html
     include-after-body: _includes/site-footer.html
 
 filters:

@@ -1,29 +1,21 @@
 ---
 title: "Citation"
-description: "Placeholder citation information for the saRNA Database."
+description: "How to cite the saRNA Database and associated review article."
 format:
   html:
     toc: false
 ---
 
-The first validated database release will accompany the associated review article. Article and dataset citation details will be added with the release, and they will have separate persistent identifiers.
-
-## Review-paper citation
-
-The review-paper citation will be added after publication.
-
 ## Database citation
 
-The database citation will identify the release version, project contributors, and the persistent dataset record.
+Please cite the specific database release used in your work. The complete citation and export formats are available from the [Zenodo record](https://doi.org/10.5281/zenodo.21871232).
 
-## Dataset DOI
+**Dataset:** Sušjan, P., Pečan, P., Godeša, A., Ramona Caldana, F., and Jerala, R. *saRNA database*. Version 1.0.0. Zenodo. [https://doi.org/10.5281/zenodo.21871232](https://doi.org/10.5281/zenodo.21871232)
 
-No dataset DOI has been assigned yet. The Zenodo version DOI will be added here after the first deliberate manual upload.
+## Review article
+
+Accepted; citation forthcoming.
 
 ## Database version
 
 Current database version: **{{< var database-version >}}**.
-
-## Suggested citation text
-
-Suggested citation text will be provided with the first release. Please cite both the associated paper and the specific database version used in an analysis.

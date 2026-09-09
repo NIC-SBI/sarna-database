@@ -1,32 +1,25 @@
 ---
-title: "Downloads"
-description: "Placeholder for future saRNA Database release files."
+title: "Archive"
+description: "Permanent archive for the saRNA Database release."
 format:
   html:
     toc: false
 ---
 
-## Release status
+## Public release
 
-::: {.sarna-placeholder}
-**No release is available yet.**
+The complete saRNA Database v1.0.0 package is preserved and distributed through Zenodo. The archive contains the authoritative Excel workbook, CSV tables, documentation, changelog, and license.
 
-Download links will be added only after the first database release has been finalized, validated, and approved for publication.
+::: {.sarna-archive-callout}
+**Open the permanent archive**
 
+[saRNA Database v1.0.0 on Zenodo](https://doi.org/10.5281/zenodo.21871232)
+
+Version DOI: `10.5281/zenodo.21871232`
 :::
 
-## Planned release files
-
-The release page will reserve locations for the following materials:
-
-- current release;
-- archived releases;
-- data dictionary;
-- changelog; and
-- Zenodo version record and DOI.
-
-Future releases will provide both the authoritative Excel workbook and a generated UTF-8 CSV export.
+This website provides a searchable presentation of the released data but does not provide separate file-download buttons. Please use Zenodo when obtaining or citing the complete package.
 
 ## Licensing
 
-Released database content is intended to be available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The website code is available under the [MIT License](https://opensource.org/license/mit/). See the repository license files for the full terms and scope.
+The database compilation and original project annotations are available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source publications and other third-party materials retain their own rights.

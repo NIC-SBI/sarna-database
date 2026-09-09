@@ -54,12 +54,26 @@ if ($temporaryFiles.Count -gt 0) {
     throw "Temporary spreadsheet files are present: $($temporaryFiles.Name -join ', ')"
 }
 
-# Placeholder-phase safeguard: no workbook or CSV database export is allowed yet.
+# Public-release safeguard: only the approved web-table CSV files are allowed.
+$approvedPublicData = @(
+    "data/public/records.csv",
+    "data/public/sequences.csv",
+    "data/public/sources.csv"
+)
 $dataFiles = @($sourceFiles | Where-Object {
     $_.Extension.ToLowerInvariant() -in @(".xlsx", ".xls", ".xlsm", ".csv")
 })
-if ($dataFiles.Count -gt 0) {
-    throw "Data files are not allowed during the placeholder phase: $($dataFiles.Name -join ', ')"
+$unapprovedDataFiles = @($dataFiles | Where-Object {
+    $relativePath = $_.FullName.Substring($root.Length).TrimStart([IO.Path]::DirectorySeparatorChar, [IO.Path]::AltDirectorySeparatorChar).Replace("\", "/")
+    $relativePath -notin $approvedPublicData
+})
+if ($unapprovedDataFiles.Count -gt 0) {
+    throw "Unapproved data files are present: $($unapprovedDataFiles.Name -join ', ')"
+}
+foreach ($relativePath in $approvedPublicData) {
+    if (-not (Test-Path -LiteralPath (Join-Path $root $relativePath) -PathType Leaf)) {
+        throw "Required public table data is missing: $relativePath"
+    }
 }
 
 $sourceText = ($sourceFiles | Where-Object { $_.Extension -in @(".qmd", ".yml", ".yaml", ".md", ".css", ".lua", ".html") } | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw }) -join [Environment]::NewLine
@@ -90,14 +104,17 @@ if ($allHtml -match $trackingPattern) {
 if ($allHtml -match '<(?:script|link)[^>]+(?:src|href)=["'']https?://') {
     throw "An external runtime asset was found; scripts, styles, and fonts must be locally bundled."
 }
-if ($allHtml -notmatch '<meta[^>]+name=["'']robots["''][^>]+noindex') {
-    throw "The placeholder site must contain a noindex directive."
+if ($allHtml -notmatch '<meta[^>]+name=["'']robots["''][^>]+index') {
+    throw "The public site must contain an index directive."
 }
-if ($allHtml -notmatch '<meta[^>]+name=["'']robots["''][^>]+nofollow') {
-    throw "The placeholder site must contain a nofollow directive."
+if ($allHtml -match '<meta[^>]+name=["'']robots["''][^>]+noindex') {
+    throw "The public site must not contain a noindex directive."
+}
+if ($allHtml -match 'href\s*=\s*["''][^"'']*\.(?:csv|xlsx?|xlsm)(?:[?#][^"'']*)?["'']') {
+    throw "A direct database-file link was found. Public download links must point to Zenodo."
 }
 
-$pagesWithoutToc = @("index.html", "downloads.html", "citation.html", "contact.html", "about.html")
+$pagesWithoutToc = @("index.html", "database.html", "downloads.html", "citation.html", "contact.html", "about.html")
 foreach ($page in $pagesWithoutToc) {
     $pageHtml = Get-Content -LiteralPath (Join-Path $sitePath $page) -Raw
     if ($pageHtml -match 'id=["'']toc-title["'']') {
@@ -105,7 +122,7 @@ foreach ($page in $pagesWithoutToc) {
     }
 }
 
-$pagesWithToc = @("methods.html", "database.html")
+$pagesWithToc = @("methods.html")
 foreach ($page in $pagesWithToc) {
     $pageHtml = Get-Content -LiteralPath (Join-Path $sitePath $page) -Raw
     if ($pageHtml -notmatch 'id=["'']toc-title["'']') {

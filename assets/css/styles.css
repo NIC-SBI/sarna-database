@@ -105,6 +105,19 @@ h1 {
   color: var(--sarna-blue-dark);
 }
 
+.sarna-archive-callout {
+  background: var(--sarna-blue-light);
+  border: 1px solid #bfd8e1;
+  border-left: 0.35rem solid var(--sarna-blue);
+  border-radius: 0.3rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.2rem;
+}
+
+.sarna-archive-callout p:last-child {
+  margin-bottom: 0;
+}
+
 .sarna-card-grid {
   display: grid;
   gap: 1rem;
@@ -141,6 +154,249 @@ h1 {
 
 .sarna-placeholder p:last-child {
   margin-bottom: 0;
+}
+
+.sarna-database-app {
+  margin: 1.5rem 0 2rem;
+  min-height: 16rem;
+}
+
+.sarna-loading,
+.sarna-load-error,
+.sarna-no-results {
+  background: var(--sarna-surface);
+  border: 1px solid var(--sarna-border);
+  border-radius: 0.35rem;
+  padding: 1rem 1.15rem;
+}
+
+.sarna-view-tabs {
+  border-bottom: 1px solid var(--sarna-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.sarna-view-tab {
+  background: transparent;
+  border: 0;
+  border-bottom: 0.22rem solid transparent;
+  color: var(--sarna-muted);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+  padding: 0.65rem 0.9rem;
+}
+
+.sarna-view-tab[aria-selected="true"] {
+  border-bottom-color: var(--sarna-blue);
+  color: var(--sarna-blue-dark);
+}
+
+.sarna-database-controls {
+  background: var(--sarna-surface);
+  border: 1px solid var(--sarna-border);
+  border-radius: 0.35rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sarna-search label,
+.sarna-filter label {
+  color: var(--sarna-blue-dark);
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 650;
+  margin-bottom: 0.25rem;
+}
+
+.sarna-search input,
+.sarna-filter select,
+.sarna-page-size select {
+  background: #fff;
+  border: 1px solid #aebbc3;
+  border-radius: 0.25rem;
+  color: var(--sarna-ink);
+  font: inherit;
+  padding: 0.48rem 0.58rem;
+}
+
+.sarna-search input {
+  max-width: 45rem;
+  width: 100%;
+}
+
+.sarna-filter-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.sarna-filter select {
+  width: 100%;
+}
+
+.sarna-control-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sarna-secondary-button,
+.sarna-expand-button {
+  background: #fff;
+  border: 1px solid #9dafb9;
+  border-radius: 0.25rem;
+  color: var(--sarna-blue-dark);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.38rem 0.65rem;
+}
+
+.sarna-secondary-button:hover,
+.sarna-expand-button:hover {
+  background: var(--sarna-blue-light);
+}
+
+.sarna-secondary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.sarna-results-summary {
+  color: var(--sarna-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 1rem 0 0.55rem;
+}
+
+.sarna-table-region {
+  border: 1px solid var(--sarna-border);
+  border-radius: 0.35rem;
+  max-height: 82vh;
+  overflow: auto;
+}
+
+.sarna-data-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.88rem;
+  margin: 0;
+  min-width: 76rem;
+  width: 100%;
+}
+
+.sarna-data-table th,
+.sarna-data-table td {
+  border-bottom: 1px solid var(--sarna-border);
+  padding: 0.55rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.sarna-data-table th {
+  background: var(--sarna-blue-dark);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.sarna-data-table tbody tr:not(.sarna-detail-row):hover td {
+  background: #f3f8fa;
+}
+
+.sarna-data-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.sarna-sort-button {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0;
+  text-align: left;
+}
+
+.sarna-detail-heading,
+.sarna-detail-cell {
+  min-width: 5.25rem;
+  width: 5.25rem;
+}
+
+.sarna-sequence {
+  font-family: ui-monospace, "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+
+.sarna-empty {
+  color: #78868e;
+}
+
+.sarna-retracted {
+  background: #fce8e8;
+  border: 1px solid #dc9e9e;
+  border-radius: 999px;
+  color: #7e2020;
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-top: 0.35rem;
+  padding: 0.08rem 0.45rem;
+  width: fit-content;
+}
+
+.sarna-detail-row td {
+  background: #f6fafb;
+  padding: 1rem;
+}
+
+.sarna-record-details h3,
+.sarna-record-details h4 {
+  margin-top: 0;
+}
+
+.sarna-record-details h4 {
+  border-top: 1px solid var(--sarna-border);
+  font-size: 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+}
+
+.sarna-record-details dl {
+  display: grid;
+  gap: 0.35rem 1rem;
+  grid-template-columns: minmax(11rem, 15rem) minmax(0, 1fr);
+  margin: 0;
+}
+
+.sarna-record-details dt {
+  color: var(--sarna-muted);
+  font-weight: 650;
+}
+
+.sarna-record-details dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.sarna-pagination {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: flex-start;
+  margin-top: 0.8rem;
+}
+
+.sarna-page-size {
+  margin-left: auto;
 }
 
 .sarna-footer-note {
@@ -180,6 +436,36 @@ h1 {
 
   .sarna-institutional-logo {
     width: min(100%, 22rem);
+  }
+
+  .sarna-filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sarna-record-details dl {
+    grid-template-columns: 1fr;
+  }
+
+  .sarna-record-details dd {
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .sarna-view-tab {
+    flex: 1 1 auto;
+    font-size: 0.84rem;
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+  }
+
+  .sarna-filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sarna-page-size {
+    margin-left: 0;
+    width: 100%;
   }
 }
 

@@ -13,32 +13,30 @@ format:
 ::: {.sarna-status}
 **{{< var database-status >}}**
 
-The first validated database release will accompany the associated review article. No preliminary or unvalidated data are currently public.
+Version {{< var database-version >}} contains 4,706 observation-level records, 2,424 normalized sequence identities, and 114 literature and patent sources.
 :::
 
-## Purpose
-
-The resource will bring together structured information from the saRNA literature, making published sequence and experimental information easier to find, compare, cite, and reuse.
-
-## Planned functionality
+## Explore the database
 
 <div class="sarna-card-grid">
 <section class="sarna-card">
-<h3>Search</h3>
-<p>Search the complete released table from one global search field.</p>
+<h3>Search records</h3>
+<p>Search sequences, genes, models, experimental conditions, and source publications.</p>
+<p><a href="database.qmd">Open the database</a></p>
 </section>
 <section class="sarna-card">
-<h3>Explore</h3>
-<p>Sort records, filter the results, and navigate a wide table accessibly.</p>
+<h3>Review full details</h3>
+<p>Start with a compact table and expand any row to inspect every released field and its source context.</p>
 </section>
 <section class="sarna-card">
-<h3>Download</h3>
-<p>Download the authoritative Excel workbook and a UTF-8 CSV export for each release.</p>
+<h3>Use the archived release</h3>
+<p>Obtain and cite the complete versioned package from Zenodo.</p>
+<p><a href="https://doi.org/10.5281/zenodo.21871232">Open the Zenodo archive</a></p>
 </section>
 </div>
 
-## Learn more
+## About the resource
 
-Read about the planned [methods](methods.qmd), the future [database interface](database.qmd), [downloads](downloads.qmd), [citation](citation.qmd), and [contact options](contact.qmd).
+The database brings together structured information from the saRNA literature, making published sequence and experimental information easier to find, review, cite, and reuse. Read the [methods](methods.qmd), [citation guidance](citation.qmd), and [project information](about.qmd).
 
 <p class="sarna-footer-note">This site does not use analytics, cookies, advertising, or visitor tracking.</p>
