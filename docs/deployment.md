@@ -1,28 +1,17 @@
 # Deployment
 
-The site is designed for GitHub Pages with GitHub Actions as the Pages source. The workflows are:
+The public website is deployed at <https://nic-sbi.github.io/sarna-database/> from the `main` branch through GitHub Pages.
 
-- .github/workflows/check-site.yml renders the complete site on pushes and pull requests and runs the repository checks.
-- .github/workflows/publish-site.yml renders, validates, and deploys the site on pushes to main or by manual workflow execution.
+The GitHub Actions workflows are:
 
-## Initial setup
+- `.github/workflows/check-site.yml`, which renders and validates the complete site on pushes and pull requests; and
+- `.github/workflows/publish-site.yml`, which renders, validates, and deploys the site on pushes to `main` or by manual workflow execution.
 
-1. Create a public repository named sarna-database in the department’s GitHub organization.
-2. Replace github-organization in _variables.yml with the confirmed organization slug.
-3. Replace project-email in _variables.yml with the confirmed project address.
-4. Push the default branch named main.
-5. In the repository’s Pages settings, select **GitHub Actions** as the source.
-6. Confirm the first workflow run and the generated project URL:
-   https://<organization>.github.io/sarna-database/.
-
-Until the organization slug is confirmed, the documented target is
-https://GITHUB_ORG_PLACEHOLDER.github.io/sarna-database/ (a configuration marker, not a live link).
-
-The site uses relative internal links and does not assume a custom domain. The organization and email placeholders are intentionally safe to leave in place during local development.
+The repository's Pages source must remain set to **GitHub Actions**. The site uses relative internal links so it works correctly under the `/sarna-database/` project path.
 
 ## Custom-domain support
 
-No CNAME file is included initially. If a custom domain is approved later:
+No CNAME file is included. If a custom domain is approved later:
 
 1. Obtain institutional or project approval.
 2. Select the domain.
@@ -33,12 +22,12 @@ No CNAME file is included initially. If a custom domain is approved later:
 7. Verify HTTPS.
 8. Retain the GitHub Pages URL as the technical fallback.
 
-The optional custom-domain value in _variables.yml is documentation space only; it does not activate a domain.
+The optional `custom-domain` value in `_variables.yml` is documentation only; it does not activate a domain.
 
 ## Search indexing
 
-The placeholder site includes a noindex directive to reduce premature search-engine indexing. Remove that directive as part of the data-release pull request after the first validated release is ready.
+The public site is configured with `index, follow`. Keep the validation check that prevents an accidental return to `noindex`.
 
 ## Zenodo
 
-The future release workflow will generate a release package but will not upload, publish, or overwrite a Zenodo record automatically. Upload and publication remain deliberate manual actions.
+The authoritative v1.0.0 release is archived at <https://doi.org/10.5281/zenodo.21871232>. Uploading, publishing, or replacing a Zenodo release remains a deliberate manual action and is not performed by the site deployment workflow.

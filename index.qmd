@@ -39,4 +39,12 @@ Version {{< var database-version >}} contains 4,706 observation-level records, 2
 
 The database brings together structured information from the saRNA literature, making published sequence and experimental information easier to find, review, cite, and reuse. Read the [methods](methods.qmd), [citation guidance](citation.qmd), and [project information](about.qmd).
 
+::: {.sarna-contribution-callout}
+## Help improve the database
+
+Do you know of a relevant study or patent that is missing? Do you have unpublished data that you would like the curators to consider for a future release? Please review the [contact and contribution guidance](contact.qmd).
+
+Proposed additions are reviewed for scope, provenance, permissions, and attribution before inclusion. Please do not submit confidential, personal, or patient-identifiable information.
+:::
+
 <p class="sarna-footer-note">This site does not use analytics, cookies, advertising, or visitor tracking.</p>

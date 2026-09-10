@@ -118,6 +118,24 @@ h1 {
   margin-bottom: 0;
 }
 
+.sarna-contribution-callout {
+  background: #fffaf3;
+  border: 1px solid #e2c08e;
+  border-left: 0.35rem solid var(--sarna-gold);
+  border-radius: 0.3rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.2rem;
+}
+
+.sarna-contribution-callout h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.sarna-contribution-callout p:last-child {
+  margin-bottom: 0;
+}
+
 .sarna-card-grid {
   display: grid;
   gap: 1rem;
@@ -143,17 +161,6 @@ h1 {
 
 .sarna-muted {
   color: var(--sarna-muted);
-}
-
-.sarna-placeholder {
-  background: #fffaf3;
-  border: 1px dashed #d69a57;
-  border-radius: 0.35rem;
-  padding: 1rem 1.15rem;
-}
-
-.sarna-placeholder p:last-child {
-  margin-bottom: 0;
 }
 
 .sarna-database-app {

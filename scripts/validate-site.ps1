@@ -80,6 +80,14 @@ $sourceText = ($sourceFiles | Where-Object { $_.Extension -in @(".qmd", ".yml", 
 if ($sourceText.Contains("](/")) {
     throw "An internal source link starts with '/', which would break repository-subpath hosting."
 }
+$unresolvedPlaceholderPattern = 'PROJECT_EMAIL_PLACEHOLDER|GITHUB_ORG_PLACEHOLDER|COPYRIGHT_HOLDER_PLACEHOLDER'
+if ($sourceText -match $unresolvedPlaceholderPattern) {
+    throw "An unresolved placeholder was found in public source content."
+}
+$licenseText = Get-Content -LiteralPath (Join-Path $root "LICENSE") -Raw
+if ($licenseText -match $unresolvedPlaceholderPattern) {
+    throw "An unresolved placeholder was found in LICENSE."
+}
 
 $htmlFiles = @(Get-ChildItem -LiteralPath $sitePath -Recurse -Filter *.html -File)
 if ($htmlFiles.Count -eq 0) {
@@ -87,7 +95,6 @@ if ($htmlFiles.Count -eq 0) {
 }
 
 $allHtml = ($htmlFiles | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw }) -join [Environment]::NewLine
-$unresolvedPlaceholderPattern = 'PROJECT_EMAIL_PLACEHOLDER|GITHUB_ORG_PLACEHOLDER|COPYRIGHT_HOLDER_PLACEHOLDER'
 if ($allHtml -match $unresolvedPlaceholderPattern) {
     throw "An unresolved public placeholder was found in rendered HTML."
 }

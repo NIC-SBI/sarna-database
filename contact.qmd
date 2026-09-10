@@ -6,16 +6,18 @@ format:
     toc: false
 ---
 
-## Corrections and questions
+## Questions about an individual study
 
-Please use the project contact address to report:
+Questions about the methods, results, or interpretation of an individual study should be directed to that study's corresponding author. Use the database's Sources view to identify the associated publication or patent.
 
-- suspected errors;
-- missing publications;
-- sequence discrepancies;
-- metadata corrections; and
-- reuse or licensing questions.
+## Database coverage and contributions
 
-[{{< var project-email >}}](mailto:{{< var project-email >}})
+::: {.sarna-contribution-callout}
+The curators welcome reports of relevant studies or patents that may be missing from the database. Researchers may also propose their own unpublished data for consideration in a future release.
 
-Please include the relevant record, sequence, or publication identifier when possible. Accepted corrections will be included in a later versioned release.
+For database-wide corrections and proposed additions, contact the corresponding author of the associated *Molecules* review article. The [Citation page](citation.qmd) is the canonical location for the article's publication link and full citation.
+
+When contacting the corresponding author, include a DOI, PMID, patent number, database record identifier, or other source information where possible. For unpublished data, describe the provenance, permission to share, preferred attribution, and publication status. Do not send confidential, personal, or patient-identifiable information.
+:::
+
+Submissions are reviewed for relevance, evidence, permissions, and data quality. Acceptance is not automatic. Approved corrections and additions will appear in a later versioned release rather than silently changing an archived release.

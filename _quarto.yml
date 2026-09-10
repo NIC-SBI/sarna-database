@@ -41,6 +41,3 @@ format:
     anchor-sections: true
     include-in-header: _includes/robots.html
     include-after-body: _includes/site-footer.html
-
-filters:
-  - scripts/project-links.lua
