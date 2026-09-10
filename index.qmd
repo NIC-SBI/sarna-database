@@ -16,6 +16,10 @@ format:
 Version {{< var database-version >}} contains 4,706 observation-level records, 2,424 normalized sequence identities, and 114 literature and patent sources.
 :::
 
+## What are saRNAs?
+
+Small activating RNAs (saRNAs) are short double-stranded RNAs that increase endogenous gene expression through RNA activation. They are being explored as research tools and potential therapeutics, including for targets that are difficult to address by conventional approaches. This database brings published saRNA sequences and their experimental context together to support analysis and more rational design.
+
 ## Explore the database
 
 <div class="sarna-card-grid">
