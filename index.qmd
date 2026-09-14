@@ -41,7 +41,7 @@ Small activating RNAs (saRNAs) are short double-stranded RNAs that increase endo
 
 ## About the resource
 
-The database brings together structured information from the saRNA literature, making published sequence and experimental information easier to find, review, cite, and reuse. Read the [methods](methods.qmd), [citation guidance](citation.qmd), and [project information](about.qmd).
+The database brings together structured information from the saRNA literature, making published sequence and experimental information easier to find, review, cite, and reuse. It accompanies the *Molecules* review [Small Activating RNAs: A Curated Database and an Overview of Rational Design Principles](https://doi.org/{{< var article-doi >}}). Read the [methods](methods.qmd), [citation guidance](citation.qmd), and [project information](about.qmd).
 
 ::: {.sarna-contribution-callout}
 ## Help improve the database

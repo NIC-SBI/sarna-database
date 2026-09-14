@@ -12,7 +12,7 @@ Version **1.0.0** is the current validated public release. The website presents 
 
 https://doi.org/10.5281/zenodo.21871232
 
-The associated review article has been accepted; its citation is forthcoming.
+The associated review article is published in *Molecules*: [Small Activating RNAs: A Curated Database and an Overview of Rational Design Principles](https://doi.org/10.3390/molecules31183249).
 
 ## Scope
 
@@ -79,7 +79,9 @@ The website represents the current public version of the resource, while Zenodo 
 
 ## Citation
 
-Users should cite the specific version of the saRNA Database used in their work. The associated review article has been accepted; its citation is forthcoming.
+Users should cite the specific version of the saRNA Database used in their work and the associated review article:
+
+Sušjan-Leite, P.; Pečan, P.; Godeša, A.; Caldana, F.R.; Jerala, R. Small Activating RNAs: A Curated Database and an Overview of Rational Design Principles. *Molecules* **2026**, *31*, 3249. [https://doi.org/10.3390/molecules31183249](https://doi.org/10.3390/molecules31183249)
 
 See the [Citation](https://nic-sbi.github.io/sarna-database/citation.html) page for current citation information.
 
