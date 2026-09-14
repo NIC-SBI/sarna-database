@@ -14,7 +14,7 @@ Please cite the specific database release used in your work. The complete citati
 
 ## Review article
 
-Accepted; citation forthcoming.
+Sušjan-Leite, P.; Pečan, P.; Godeša, A.; Caldana, F.R.; Jerala, R. Small Activating RNAs: A Curated Database and an Overview of Rational Design Principles. *Molecules* **2026**, *31*, 3249. [https://doi.org/10.3390/molecules31183249](https://doi.org/10.3390/molecules31183249)
 
 ## Database version
 
