@@ -8,9 +8,9 @@ format:
 
 ## Database citation
 
-Please cite the specific database release used in your work. The complete citation and export formats are available from the [Zenodo record](https://doi.org/10.5281/zenodo.21871232).
+Please cite the specific database release used in your work. The complete citation and export formats are available from the <a href="https://doi.org/10.5281/zenodo.21871232" data-umami-event="archive-open">Zenodo record</a>.
 
-**Dataset:** Sušjan, P., Pečan, P., Godeša, A., Ramona Caldana, F., and Jerala, R. *saRNA database*. Version 1.0.0. Zenodo. [https://doi.org/10.5281/zenodo.21871232](https://doi.org/10.5281/zenodo.21871232)
+**Dataset:** Sušjan, P., Pečan, P., Godeša, A., Ramona Caldana, F., and Jerala, R. *saRNA database*. Version 1.0.0. Zenodo. <a href="https://doi.org/10.5281/zenodo.21871232" data-umami-event="archive-open">https://doi.org/10.5281/zenodo.21871232</a>
 
 ## Review article
 

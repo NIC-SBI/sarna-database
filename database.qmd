@@ -10,7 +10,7 @@ The public database contains 4,706 literature-derived records representing repor
 ::: {.sarna-archive-callout}
 **saRNA Database v1.0.0**
 
-For the complete release package, permanent archive, and reuse citation, visit [Zenodo record 10.5281/zenodo.21871232](https://doi.org/10.5281/zenodo.21871232).
+For the complete release package, permanent archive, and reuse citation, visit <a href="https://doi.org/10.5281/zenodo.21871232" data-umami-event="archive-open">Zenodo record 10.5281/zenodo.21871232</a>.
 :::
 
 ## Search the database

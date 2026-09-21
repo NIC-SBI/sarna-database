@@ -9,7 +9,7 @@ The expected maintenance process is intentionally small:
 5. Merge the pull request to main.
 6. Confirm the automatic GitHub Pages deployment.
 
-Keep public-site changes focused and reviewable. Do not add working spreadsheets, manuscript files, reviewer materials, internal notes, unpublished metadata, analytics, cookies, or tracking services.
+Keep public-site changes focused and reviewable. Do not add working spreadsheets, manuscript files, reviewer materials, internal notes, unpublished metadata, cookies, or tracking services beyond the approved Umami analytics integration. Do not send search text or database record contents as analytics events.
 
 For each public database release:
 

@@ -26,7 +26,7 @@ Small activating RNAs (saRNAs) are short double-stranded RNAs that increase endo
 <section class="sarna-card">
 <h3>Search records</h3>
 <p>Search sequences, genes, models, experimental conditions, and source publications.</p>
-<p><a href="database.qmd">Open the database</a></p>
+<p><a href="database.qmd" data-umami-event="database-open">Open the database</a></p>
 </section>
 <section class="sarna-card">
 <h3>Review full details</h3>
@@ -35,7 +35,7 @@ Small activating RNAs (saRNAs) are short double-stranded RNAs that increase endo
 <section class="sarna-card">
 <h3>Use the archived release</h3>
 <p>Obtain and cite the complete versioned package from Zenodo.</p>
-<p><a href="https://doi.org/10.5281/zenodo.21871232">Open the Zenodo archive</a></p>
+<p><a href="https://doi.org/10.5281/zenodo.21871232" data-umami-event="archive-open">Open the Zenodo archive</a></p>
 </section>
 </div>
 
@@ -51,4 +51,4 @@ Do you know of a relevant study or patent that is missing? Do you have unpublish
 Proposed additions are reviewed for scope, provenance, permissions, and attribution before inclusion. Please do not submit confidential, personal, or patient-identifiable information.
 :::
 
-<p class="sarna-footer-note">This site does not use analytics, cookies, advertising, or visitor tracking.</p>
+<p class="sarna-footer-note">This site uses cookieless Umami analytics for aggregate visits, approximate country, and selected link clicks. Search text and database record contents are not sent as analytics events. See the <a href="about.qmd#analytics">Analytics section</a> on the About page.</p>

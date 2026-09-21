@@ -186,6 +186,7 @@
       if (url) {
         const link = element("a", "", value);
         link.href = url;
+        link.dataset.umamiEvent = "source-open";
         link.target = "_blank";
         link.rel = "noopener noreferrer";
         container.append(link);
@@ -203,6 +204,7 @@
       if (url) {
         const link = element("a", "", value);
         link.href = url;
+        link.dataset.umamiEvent = "source-open";
         link.target = "_blank";
         link.rel = "noopener noreferrer";
         container.append(link);

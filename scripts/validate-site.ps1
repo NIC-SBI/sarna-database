@@ -104,12 +104,20 @@ if ($allHtml -match 'href\s*=\s*["'']mailto:\s*["'']') {
 if ($allHtml -match 'href\s*=\s*["'']mailto:[^"''>]*(?:PROJECT_EMAIL_PLACEHOLDER|GITHUB_ORG_PLACEHOLDER|COPYRIGHT_HOLDER_PLACEHOLDER|\{\{|\}\})') {
     throw "A malformed placeholder mailto link was found in rendered HTML."
 }
-$trackingPattern = 'googletagmanager|google-analytics|gtag\s*\(|plausible|matomo|hotjar|mixpanel|segment\.io|facebook\.com/tr|pixel\.facebook'
-if ($allHtml -match $trackingPattern) {
-    throw "Tracking or analytics code was found in the rendered site."
+$umamiScriptPattern = '<script defer src="https://cloud\.umami\.is/script\.js" data-website-id="983958d8-0953-4c8d-9f9d-01a18dc39a81" data-domains="nic-sbi\.github\.io" data-exclude-search="true"></script>'
+foreach ($htmlFile in $htmlFiles) {
+    $pageHtml = Get-Content -LiteralPath $htmlFile.FullName -Raw
+    if ([regex]::Matches($pageHtml, $umamiScriptPattern).Count -ne 1) {
+        throw "The approved Umami tracking script must appear exactly once in $($htmlFile.Name)."
+    }
 }
-if ($allHtml -match '<(?:script|link)[^>]+(?:src|href)=["'']https?://') {
-    throw "An external runtime asset was found; scripts, styles, and fonts must be locally bundled."
+$htmlWithoutApprovedAnalytics = [regex]::Replace($allHtml, $umamiScriptPattern, "")
+$trackingPattern = 'googletagmanager|google-analytics|gtag\s*\(|plausible|matomo|hotjar|mixpanel|segment\.io|facebook\.com/tr|pixel\.facebook'
+if ($htmlWithoutApprovedAnalytics -match $trackingPattern) {
+    throw "Unapproved tracking or analytics code was found in the rendered site."
+}
+if ($htmlWithoutApprovedAnalytics -match '<(?:script|link)[^>]+(?:src|href)=["'']https?://') {
+    throw "An unapproved external runtime asset was found; only the Umami tracker may load remotely."
 }
 if ($allHtml -notmatch '<meta[^>]+name=["'']robots["''][^>]+index') {
     throw "The public site must contain an index directive."
