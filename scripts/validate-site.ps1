@@ -104,7 +104,7 @@ if ($allHtml -match 'href\s*=\s*["'']mailto:\s*["'']') {
 if ($allHtml -match 'href\s*=\s*["'']mailto:[^"''>]*(?:PROJECT_EMAIL_PLACEHOLDER|GITHUB_ORG_PLACEHOLDER|COPYRIGHT_HOLDER_PLACEHOLDER|\{\{|\}\})') {
     throw "A malformed placeholder mailto link was found in rendered HTML."
 }
-$umamiScriptPattern = '<script defer src="https://cloud\.umami\.is/script\.js" data-website-id="983958d8-0953-4c8d-9f9d-01a18dc39a81" data-domains="nic-sbi\.github\.io" data-exclude-search="true"></script>'
+$umamiScriptPattern = '<script defer(?:="")? src="https://cloud\.umami\.is/script\.js" data-website-id="983958d8-0953-4c8d-9f9d-01a18dc39a81" data-domains="nic-sbi\.github\.io" data-exclude-search="true"></script>'
 foreach ($htmlFile in $htmlFiles) {
     $pageHtml = Get-Content -LiteralPath $htmlFile.FullName -Raw
     if ([regex]::Matches($pageHtml, $umamiScriptPattern).Count -ne 1) {
