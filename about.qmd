@@ -25,4 +25,8 @@ The database compilation and original project annotations are available under CC
 
 ## Repository and archive
 
-Website source code is available in the [public GitHub repository](https://github.com/{{< var github-organization >}}/{{< var repository-name >}}). The complete v1.0.0 database release is available from the [Zenodo archive](https://doi.org/10.5281/zenodo.21871232), and the associated review is published in *Molecules*: [Small Activating RNAs: A Curated Database and an Overview of Rational Design Principles](https://doi.org/{{< var article-doi >}}).
+Website source code is available in the [public GitHub repository](https://github.com/{{< var github-organization >}}/{{< var repository-name >}}). The complete v1.0.0 database release is available from the <a href="https://doi.org/10.5281/zenodo.21871232" data-umami-event="archive-open">Zenodo archive</a>, and the associated review is published in *Molecules*: [Small Activating RNAs: A Curated Database and an Overview of Rational Design Principles](https://doi.org/{{< var article-doi >}}).
+
+## Analytics
+
+This site uses [Umami Cloud](https://umami.is/) to count page visits, estimate unique visitors and their countries, and measure clicks on selected database, archive, and source links. Umami does not use tracking cookies. Country is inferred from the visitor's network location and may be inaccurate. We exclude URL query strings and do not send search text, database record contents, or personal information as custom events. Analytics data is managed by Umami Cloud; see [Umami's privacy information](https://umami.is/privacy).

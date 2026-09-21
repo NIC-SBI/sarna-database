@@ -39,5 +39,7 @@ format:
     toc-title: "On this page"
     page-navigation: true
     anchor-sections: true
-    include-in-header: _includes/robots.html
+    include-in-header:
+      - _includes/robots.html
+      - _includes/analytics.html
     include-after-body: _includes/site-footer.html

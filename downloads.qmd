@@ -13,7 +13,7 @@ The complete saRNA Database v1.0.0 package is preserved and distributed through 
 ::: {.sarna-archive-callout}
 **Open the permanent archive**
 
-[saRNA Database v1.0.0 on Zenodo](https://doi.org/10.5281/zenodo.21871232)
+<a href="https://doi.org/10.5281/zenodo.21871232" data-umami-event="archive-open">saRNA Database v1.0.0 on Zenodo</a>
 
 Version DOI: `10.5281/zenodo.21871232`
 :::
