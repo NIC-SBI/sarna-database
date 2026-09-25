@@ -51,4 +51,4 @@ Do you know of a relevant study or patent that is missing? Do you have unpublish
 Proposed additions are reviewed for scope, provenance, permissions, and attribution before inclusion. Please do not submit confidential, personal, or patient-identifiable information.
 :::
 
-<p class="sarna-footer-note">This site uses cookieless Umami analytics for aggregate visits, approximate country, and selected link clicks. Search text and database record contents are not sent as analytics events. See the <a href="about.qmd#analytics">Analytics section</a> on the About page.</p>
+<p class="sarna-footer-note">This site uses cookieless Umami analytics.</p>
