@@ -17,6 +17,8 @@ For the complete release package, permanent archive, and reuse citation, visit <
 
 The Records view shows a compact set of commonly used fields. Select **Expand** beside any row to see the complete record and its source details. The Sequences and Sources views provide the other two released data tables.
 
+Select a source label or title to open its reference. In expanded details, DOI links open the paper's website, PMID links open PubMed, and patent numbers open Google Patents. Reference links open in a new tab.
+
 <div
   id="sarna-database-app"
   class="sarna-database-app"

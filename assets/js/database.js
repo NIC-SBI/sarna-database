@@ -161,12 +161,38 @@
     return Object.values(record).join(" ").toLocaleLowerCase();
   }
 
+  function identifierURL(field, value) {
+    const identifier = (value || "").trim();
+    if (field === "doi" && /^10\.\d{4,9}\/\S+$/i.test(identifier)) {
+      return `https://doi.org/${encodeURI(identifier).replaceAll("?", "%3F").replaceAll("#", "%23")}`;
+    }
+    if (field === "pmid" && /^\d+$/.test(identifier)) {
+      return `https://pubmed.ncbi.nlm.nih.gov/${identifier}/`;
+    }
+    if (field === "patent_number" && /^[A-Z]{2}\d+[A-Z]\d*$/i.test(identifier)) {
+      return `https://patents.google.com/patent/${encodeURIComponent(identifier)}/en`;
+    }
+    return "";
+  }
+
   function sourceURL(source) {
     if (!source) return "";
-    if (source.doi) return `https://doi.org/${source.doi}`;
-    if (source.pmid) return `https://pubmed.ncbi.nlm.nih.gov/${source.pmid}/`;
-    if (source.patent_number) return `https://patents.google.com/patent/${encodeURIComponent(source.patent_number)}/en`;
-    return "";
+    return identifierURL("doi", source.doi)
+      || identifierURL("pmid", source.pmid)
+      || identifierURL("patent_number", source.patent_number);
+  }
+
+  function appendLinkedValue(container, value, url) {
+    if (!url) {
+      container.append(document.createTextNode(value));
+      return;
+    }
+    const link = element("a", "", value);
+    link.href = url;
+    link.dataset.umamiEvent = "source-open";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    container.append(link);
   }
 
   function displayValue(record, field) {
@@ -182,37 +208,26 @@
     }
 
     if (field === "_source") {
-      const url = sourceURL(record._source);
-      if (url) {
-        const link = element("a", "", value);
-        link.href = url;
-        link.dataset.umamiEvent = "source-open";
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-        container.append(link);
-      } else {
-        container.append(document.createTextNode(value));
-      }
+      appendLinkedValue(container, value, sourceURL(record._source));
       if (record._source?.access_note?.toLocaleLowerCase().includes("retract")) {
         container.append(element("span", "sarna-retracted", "Retracted source"));
       }
       return;
     }
 
-    if (state.view === "sources" && field === "reference_label") {
-      const url = sourceURL(record);
-      if (url) {
-        const link = element("a", "", value);
-        link.href = url;
-        link.dataset.umamiEvent = "source-open";
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-        container.append(link);
-        return;
-      }
+    if (field === "reference_label" || field === "title") {
+      appendLinkedValue(container, value, sourceURL(record));
+      return;
     }
 
-    container.append(document.createTextNode(value));
+    if (field === "related_patent_numbers") {
+      value.split(/([;,]\s*)/).forEach((part, index) => {
+        appendLinkedValue(container, part, index % 2 === 0 ? identifierURL("patent_number", part) : "");
+      });
+      return;
+    }
+
+    appendLinkedValue(container, value, identifierURL(field, value));
   }
 
   function uniqueSorted(values) {
@@ -395,10 +410,10 @@
 
     Object.entries(record)
       .filter(([field]) => !field.startsWith("_"))
-      .forEach(([field, value]) => {
+      .forEach(([field]) => {
         const term = element("dt", "", fieldLabel(field));
         const definition = element("dd");
-        definition.textContent = value || "—";
+        appendValue(definition, record, field);
         if (field.includes("sequence")) definition.classList.add("sarna-sequence");
         list.append(term, definition);
       });
@@ -407,10 +422,10 @@
       const sourceHeading = element("h4", "", "Source details");
       wrapper.append(heading, list, sourceHeading);
       const sourceList = element("dl");
-      ["publication_id", "source_type", "reference_label", "title", "year", "doi", "pmid", "patent_number", "access_note"].forEach((field) => {
+      ["publication_id", "source_type", "reference_label", "title", "year", "doi", "pmid", "patent_number", "related_patent_numbers", "access_note"].forEach((field) => {
         const term = element("dt", "", fieldLabel(field));
         const definition = element("dd");
-        definition.textContent = record._source[field] || "—";
+        appendValue(definition, record._source, field);
         sourceList.append(term, definition);
       });
       wrapper.append(sourceList);
